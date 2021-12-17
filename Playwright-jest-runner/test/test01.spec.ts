@@ -1,4 +1,4 @@
-import { Browser, BrowserContext, chromium, Page } from "playwright-core";
+import { Browser, BrowserContext, chromium, Page } from "playwright";
 
 describe('Jest runner - without page object', ()=>{
     let browser: Browser;
