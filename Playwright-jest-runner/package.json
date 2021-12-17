@@ -1,0 +1,21 @@
+{
+  "name": "playwright-jest-runner",
+  "version": "1.0.0",
+  "description": "playwright test using jest runner",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "ANKUR DUBEY",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^27.0.3",
+    "jasmine": "^3.10.0",
+    "jest": "^27.4.5",
+    "jest-allure": "0.1.3",
+    "jest-html-reporter": "^3.4.2",
+    "playwright": "^1.17.1",
+    "ts-jest": "^27.1.2",
+    "typescript": "^4.5.4"
+  }
+}

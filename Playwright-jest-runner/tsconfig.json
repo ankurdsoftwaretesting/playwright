@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "esModuleInterop": true,
+        "module": "commonjs",
+        "lib": ["ES2015"],
+        "strict": true,
+        "resolveJsonModule": true
+    },
+    "files": ["node_modules/jest-allure/dist/setup.d.ts"]
+}
