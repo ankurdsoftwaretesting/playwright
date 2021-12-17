@@ -1,4 +1,4 @@
-import { Page } from 'playwright-core';
+import { Page } from 'playwright';
 
 export default class Home{
     constructor(private page: Page){}
