@@ -1,4 +1,4 @@
-import { Browser, BrowserContext, chromium, Page } from "playwright-core";
+import { Browser, BrowserContext, chromium, Page } from "playwright";
 import Home from '../pages/home.page'
 
 describe('Jest runner - with page object', ()=>{
