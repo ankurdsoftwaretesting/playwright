@@ -5,7 +5,7 @@ describe('Jest runner - without page object', ()=>{
     let context: BrowserContext;
     let page: Page;
     test('', async() => {
-        browser = await chromium.launch({headless: false});
+        browser = await chromium.launch({headless: true});
         context = await browser.newContext();
         page = await context.newPage();
 
