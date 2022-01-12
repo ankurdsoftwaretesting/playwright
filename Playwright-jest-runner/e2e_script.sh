@@ -2,7 +2,7 @@ echo "Start test script..."
 
 set -e
 
-docker build --network=host -t test . -f Dockerfile.e2e && docker run -t --ipc=host test
+docker build --network=host -t test . -f Dockerfile && docker run -t --ipc=host test
 
 docker container ps -a
 
