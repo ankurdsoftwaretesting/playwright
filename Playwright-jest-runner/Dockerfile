@@ -4,8 +4,6 @@ WORKDIR /usr/src/app
 
 USER root
 
-COPY ./Playwright-jest-runner .
-
 RUN npm install
 
 RUN npm install playwright
