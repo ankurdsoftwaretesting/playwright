@@ -4,7 +4,7 @@ WORKDIR /usr/src/app
 
 USER root
 
-COPY ./playwright-e2e/Playwright-jest-runner .
+COPY ./Playwright-jest-runner .
 
 RUN npm install
 
