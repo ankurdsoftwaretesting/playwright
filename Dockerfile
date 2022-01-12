@@ -4,7 +4,7 @@ WORKDIR /usr/src/app
 
 USER root
 
-COPY ./Jest-test-runner .
+COPY ./Playright-jest-runner .
 
 RUN npm install
 
