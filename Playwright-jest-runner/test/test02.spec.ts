@@ -7,7 +7,7 @@ describe('Jest runner - with page object', ()=>{
     let page: Page;
     let home: Home;
     beforeAll(async() => {
-        browser = await chromium.launch({headless: false});
+        browser = await chromium.launch({headless: true});
         context = await browser.newContext();
         page = await context.newPage();
         await page.goto('https://playwright.dev/');
