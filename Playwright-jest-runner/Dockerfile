@@ -1,10 +1,6 @@
 FROM mcr.microsoft.com/playwright:focal
 
-WORKDIR /usr/src/app
-
-USER root
-
-COPY ./Playwright-jest-runner .
+COPY Playwright-jest-runner .
 
 RUN npm install
 
