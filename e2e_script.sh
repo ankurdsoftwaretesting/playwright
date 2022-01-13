@@ -20,6 +20,8 @@ docker container ps -a
 echo "removing image :: getting_started"
 docker rmi play-image
 
+docker image prune -a -f
+
 echo "checking images -ls"
 docker images ls
 
