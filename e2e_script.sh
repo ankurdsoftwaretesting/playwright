@@ -9,7 +9,7 @@ echo "IMAGE ID :: "
 echo $(docker image ls -q)
 
 echo "copying allure-results out of container"
-docker cp $(docker ps -q -l):/usr/src/app/allure-results .
+docker cp $(docker ps -q -l):/usr/src/app/allure-results ./
 
 docker container rm $(docker container ps -a -q)
 docker rmi $(docker images -a -q)
