@@ -11,16 +11,10 @@ echo $(docker image ls -q)
 echo "copying allure-results out of container"
 docker cp $(docker ps -q -l):/usr/src/app/allure-results .
 
-echo "checking ps -a"
+docker container rm $(docker container ps -a -q)
+docker rmi $(docker images -a -q)
+
 docker container ps -a
-
-echo "removing container :: play-jest-container"
-docker container rm play-jest-container
-
-echo "checking ps -a"
-docker container ps -a
-
-echo "checking images ls"
 docker images ls
 
 echo "Finish test."
