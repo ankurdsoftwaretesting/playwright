@@ -1,6 +1,6 @@
 echo "Start test script..."
 
-docker build -t getting-started . && docker container run --name play-jest-container getting-started
+docker build --no-cache -t getting-started . && docker container run --name play-jest-container getting-started
 
 docker container ps -a
 echo "CONTAINER ID ::"
