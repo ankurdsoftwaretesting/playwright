@@ -10,4 +10,6 @@ RUN npm install
 
 RUN npm install playwright
 
-CMD ["bash", "npm", "run", "test", "--", " ", "--runInBand"]
+RUN npm run test -- --runInBand
+
+CMD ["echo", "executed scenarios"]
