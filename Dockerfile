@@ -10,5 +10,5 @@ RUN npm install
 
 RUN npm install playwright
 
-RUN npm run test -- --runInBand
+CMD ["bash", "-c", "npm run test -- --runInBand"]
 
