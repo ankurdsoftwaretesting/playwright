@@ -2,7 +2,7 @@ echo "Start test script..."
 
 set -e
 
-docker build -t getting_started . && docker container run --name playJestContainer -t getting_started
+docker build --network=host -t getting_started . && docker container run --name playJestContainer --ipc=host getting_started
 
 docker container ps -a
 echo "CONTAINER ID ::"
