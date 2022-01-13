@@ -30,7 +30,7 @@ pipeline{
             echo 'generating allure report...'
             allure includeProperties: false, jdk: '', results: [[path: 'Playwright-jest-runner/allure-results'], [path: 'Playwright-jest-runner/allure-results']]
            
-            publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: './', reportFiles: 'reports/jest-html-report.html', reportName: 'HTML Report', reportTitles: 'Jest-HTML-Report'])
+            publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: './', reportFiles: 'jest-html-report.html', reportName: 'HTML Report', reportTitles: 'Jest-HTML-Report'])
             
         }
     }
