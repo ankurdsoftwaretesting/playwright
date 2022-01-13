@@ -11,6 +11,9 @@ echo $(docker image ls -q)
 echo "copying allure-results out of container"
 docker cp $(docker ps -q -l):/usr/src/app/allure-results ./
 
+echo "copying jest-html-report.html out of container"
+docker cp $(docker ps -q -l):/usr/src/app/reports/jest-html-report.html ./
+
 docker container rm $(docker container ps -a -q)
 docker rmi $(docker images -a -q)
 
