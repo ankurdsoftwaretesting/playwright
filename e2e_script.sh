@@ -18,7 +18,7 @@ echo "checking ps -a"
 docker container ps -a
 
 echo "removing image :: getting_started"
-docker rmi play-image
+docker system prune -a
 
 echo "checking images -ls"
 docker images ls
