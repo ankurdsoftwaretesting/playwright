@@ -1,6 +1,6 @@
 echo "Start test script..."
 
-docker build -t getting_started . && docker container run --name playJestContainer getting_started
+docker build -t playwrightTestImage . && docker container run --name playJestContainer playwrightTestImage
 
 docker container ps -a
 echo "CONTAINER ID ::"
@@ -18,7 +18,7 @@ echo "checking ps -a"
 docker container ps -a
 
 echo "removing image :: getting_started"
-docker rmi getting_started
+docker rmi playwrightTestImage
 
 echo "checking images -ls"
 docker images ls
