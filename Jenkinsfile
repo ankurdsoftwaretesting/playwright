@@ -30,9 +30,11 @@ pipeline{
             echo 'generating allure report...'
             allure includeProperties: false, jdk: '', results: [[path: 'Playwright-jest-runner/allure-results'], [path: 'Playwright-jest-runner/allure-results']]
            
-            publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: './', reportFiles: 'jest-html-report.html', reportName: 'HTML Report', reportTitles: 'Jest-HTML-Report'])
+           publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: './jest-stare', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: 'Jest Stare Report'])
+           
+//             publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: './', reportFiles: 'jest-html-report.html', reportName: 'HTML Report', reportTitles: 'Jest-HTML-Report'])
        
-            junit 'test-report.xml'
+//             junit 'test-report.xml'
         }
     }
 }
