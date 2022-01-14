@@ -12,6 +12,6 @@ module.exports = {
     ],
     testRunner: "jest-jasmine2",
     setupFilesAfterEnv: ["jest-allure/dist/setup"],
-//     testResultsProcessor: './node_modules/jest-junit-reporter',
-    testResultsProcessor: './node_modules/jest-stare',
+    testResultsProcessor: './node_modules/jest-junit-reporter',
+//     testResultsProcessor: './node_modules/jest-stare',
 }
