@@ -18,6 +18,18 @@ pipeline{
                 sh "chmod 777 ./e2e_script.sh && ./e2e_script.sh"
            }
         }
+       stage("check count"){
+           steps{
+                script {
+                   def count = readFile(file: 'failedCount.txt');
+                   println('count is ' + count);
+                   if(count === '0'){
+                      exit(1);
+                   }
+                }   
+           }
+        }
+       
         // stage("create image and run container"){
         //   steps{
         //         sh "docker build -t getting-started ."
