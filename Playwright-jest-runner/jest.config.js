@@ -2,7 +2,7 @@ module.exports = {
     preset: 'ts-jest',
     testMatch: ['**/test/*.spec.ts'],
     collectCoverage: true,
-    testTimeout: 100000,
+    testTimeout: 10000,
     "reporters": [
         "default",
         ["./node_modules/jest-html-reporter", {
