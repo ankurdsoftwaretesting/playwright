@@ -43,6 +43,7 @@ pipeline{
                    println('count is ' + count);
                    if(count == '0'){
                       println('STATUS IS 0')
+                      ${currentBuild.currentResult} = 'FAILURE'
                    }
                 }   
             }
