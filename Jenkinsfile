@@ -36,9 +36,10 @@ pipeline{
        
             junit 'test-report.xml'
            
-           script {
-                   def data = readFile(file: 'testResultJson.json')
-                   println(data)
+            script {
+                   def data = readFile(file: 'testResultJson.json');
+                   result = JSON.parse(data);
+                   println(result.numFailedTestSuites)
                }
         }
     }
