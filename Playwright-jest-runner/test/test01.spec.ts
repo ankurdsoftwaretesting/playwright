@@ -11,7 +11,7 @@ describe('Jest runner - without page object', ()=>{
 
         await page.goto('https://playwright.dev/');
         const title = await page.title();
-        expect(title).toBe('Fast and reliable end-to-end testing for modern web apps | Playwright');
+        expect(title).toBe('Fast and reliable end-to-end testing for modern web apps | Playwright1');
 
         browser.close();
     })
