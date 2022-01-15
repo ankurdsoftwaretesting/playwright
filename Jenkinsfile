@@ -18,14 +18,8 @@ pipeline{
                 sh "chmod 777 ./e2e_script.sh && ./e2e_script.sh"
            }
         }
-       
-        // stage("create image and run container"){
-        //   steps{
-        //         sh "docker build -t getting-started ."
-        //         sh "docker run --name playCon getting-started"
-        //   }
-        // }
     }
+   
     post{
         always{
             echo 'generating allure report...'
@@ -40,9 +34,7 @@ pipeline{
             script {
                    script {
                    def count = readFile(file: 'failedCount.txt');
-                   println('count is ' + count);
-                   if(count == '0'){
-                      println('STATUS IS 0')
+                   if(count !== '0'){
                       sh 'exit 1'
                    }
                 }   
