@@ -37,7 +37,8 @@ pipeline{
                    if(count != '0'){
                       sh 'exit 1'
                    }
-                }   
+                } 
+               echo "Status of build is ${currentBuild.result}"
             }
         }
     }
