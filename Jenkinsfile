@@ -39,7 +39,8 @@ pipeline{
             script {
                    def data = readFile(file: 'testResultJson.json');
                    result = JSON.parse(data);
-                   println(result.numFailedTestSuites)
+                   println(result.numFailedTestSuites);
+                   println(result.numPassedTestSuites)
                }
         }
     }
