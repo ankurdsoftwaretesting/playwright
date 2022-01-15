@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "print_result": "node utils/utilrun.ts",
+    "print_result": "node utilrun.ts",
     "test_withJsonResult": "npm run test -- --json --outputFile=testResultJson.json",
     "test_print": "npm run test_withJsonResult && npm run print_result"
   },
