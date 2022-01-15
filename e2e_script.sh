@@ -20,6 +20,9 @@ docker cp $(docker ps -q -l):/usr/src/app/test-report.xml .
 echo "copying testResultJson.json out of container"
 docker cp $(docker ps -q -l):/usr/src/app/testResultJson.json .
 
+echo "copying failedCount.txt out of container"
+docker cp $(docker ps -q -l):/usr/src/app/failedCount.txt .
+
 # echo "copying jest-stare out of container"
 # docker cp $(docker ps -q -l):usr/src/app/jest-stare .
 
