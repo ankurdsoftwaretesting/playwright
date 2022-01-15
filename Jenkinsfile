@@ -38,11 +38,8 @@ pipeline{
            
             script {
                    def count = readFile(file: 'failedCount.txt');
-//                    println(count)
-               if(count === '0'){
-                  exit(1);
-               }
-               }
+                   println(count);
+            }
         }
     }
 }
