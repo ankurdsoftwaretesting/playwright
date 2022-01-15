@@ -37,8 +37,11 @@ pipeline{
             junit 'test-report.xml'
            
             script {
-                   def data = readFile(file: 'failedCount.txt');
-                   println(data)
+                   def count = readFile(file: 'failedCount.txt');
+//                    println(count)
+               if(count === '0'){
+                  exit(1);
+               }
                }
         }
     }
