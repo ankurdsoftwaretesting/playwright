@@ -23,9 +23,9 @@ pipeline{
                 script {
                    def count = readFile(file: 'failedCount.txt');
                    println('count is ' + count);
-//                    if(count === '0'){
-//                       exit(1);
-//                    }
+                   if(count == '0'){
+                      exit(1);
+                   }
                 }   
            }
         }
