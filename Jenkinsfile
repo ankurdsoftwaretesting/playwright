@@ -35,8 +35,7 @@ pipeline{
                    script {
                    def count = readFile(file: 'failedCount.txt');
                    if(count == '0'){
-//                       sh 'exit 1'
-                      setBuildResult('FAILURE')
+                      sh 'exit 1'
                    }
                 }   
             }
