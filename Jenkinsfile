@@ -35,6 +35,11 @@ pipeline{
             publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: './', reportFiles: 'jest-html-report.html', reportName: 'HTML Report', reportTitles: 'Jest-HTML-Report'])
        
             junit 'test-report.xml'
+           
+           script {
+                   def data = readFile(file: 'testResultJson.json')
+                   println(data)
+               }
         }
     }
 }
