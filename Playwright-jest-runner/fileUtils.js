@@ -24,9 +24,19 @@ function getJsonFormattedResult() {
   }
   return result;
 }
+function writeIntoFile(data) {
+  fs.writeFile('failedCount.txt', data, (err) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    //file written successfully
+  });
+}
 module.exports = {
   getFailedSuitesNum,
   getPassedSuitesNum,
   getFailedTestsNum,
   getPassedTestsNum,
+  writeIntoFile
 };
