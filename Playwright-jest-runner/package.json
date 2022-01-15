@@ -4,7 +4,10 @@
   "description": "playwright test using jest runner",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "print_result": "node utils/utilrun.ts",
+    "test_withJsonResult": "npm run test -- --json --outputFile=testResultJson.json",
+    "test_print": "npm run test_withJsonResult && npm run print_result"
   },
   "author": "ANKUR DUBEY",
   "license": "ISC",
