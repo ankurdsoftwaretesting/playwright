@@ -33,10 +33,15 @@ pipeline{
            
             script {
                    script {
-                   def count = readFile(file: 'failedCount.txt');
-                   if(count != '0'){
-                      sh 'exit 1'
-                   }
+//                    def count = readFile(file: 'failedCount.txt');
+                      def resultJson = readJSON file: "${env.WORKSPACE}\testResultJson.json";
+                      if(resultJson.numFailedTestSuites == 0){
+                         sh 'exit 1'
+                      }
+                      
+//                    if(count != '0'){
+//                       sh 'exit 1'
+//                    }
                 } 
                echo "Status of build is ${currentBuild.result}"
             }
