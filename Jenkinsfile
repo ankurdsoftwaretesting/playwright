@@ -34,7 +34,7 @@ pipeline{
             script {
                    script {
 //                    def count = readFile(file: 'failedCount.txt');
-                      def resultJson = readJSON file: "${env.WORKSPACE}\\testResultJson.json";
+                      def resultJson = readJSON file: "${env.WORKSPACE}/testResultJson.json";
                       if(resultJson.numFailedTestSuites == 0){
                          sh 'exit 1'
                       }
