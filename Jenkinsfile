@@ -1,9 +1,12 @@
+script{
+   withCredentials([string(credentialsId: 'MY_SELF_ASAN_AGENT', variable: 'MY_SELF_ASAN_AGENT')]){
+      buildAgentName = "${MY_SELF_ASAN_AGENT}"
+   }
+}
+
 pipeline{
 
-   environment {
-      AGENT_NAME = credentials('MY_SELF_ASAN_AGENT')
-   }
-   agent {label AGENT_NAME}
+   agent {label buildAgentName}
     
     stages{
         stage("clean WS"){
