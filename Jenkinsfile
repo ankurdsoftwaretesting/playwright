@@ -1,6 +1,6 @@
 pipeline{
    
-   agent {label 'ad-internal'}
+   agent {label MY_SELF_ASAN_AGENT}
     
     stages{
         stage("clean WS"){
