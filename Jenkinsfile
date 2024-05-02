@@ -1,6 +1,9 @@
 pipeline{
-   
-   agent {label MY_SELF_ASAN_AGENT}
+
+   environment {
+      AGENT_NAME = credentials('MY_SELF_ASAN_AGENT')
+   }
+   agent {label AGENT_NAME}
     
     stages{
         stage("clean WS"){
