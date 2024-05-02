@@ -1,4 +1,7 @@
-environment{
+
+
+pipeline{
+   environment{
    MY_AGENT = credentials('MY_SELF_ASAN_AGENT')
 }
 
@@ -7,8 +10,6 @@ script{
       buildAgentName = "${MY_SELF_AN_AGENT}"
    }
 }
-
-pipeline{
 
    agent {label buildAgentName}
     
