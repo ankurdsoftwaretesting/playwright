@@ -1,16 +1,14 @@
-
-
-pipeline{
-   environment{
-   MY_AGENT = credentials('MY_SELF_ASAN_AGENT')
-}
+// environment{
+//    MY_AGENT = credentials('MY_SELF_ASAN_AGENT')
+// }
 
 script{
-   withCredentials([string(credentialsId: env.MY_AGENT, variable: 'MY_SELF_AN_AGENT')]){
+   withCredentials([string(credentialsId: 'MY_SELF_ASAN_AGENT', variable: 'MY_SELF_AN_AGENT')]){
       buildAgentName = "${MY_SELF_AN_AGENT}"
    }
 }
 
+pipeline{
    agent {label buildAgentName}
     
     stages{
